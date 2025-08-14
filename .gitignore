@@ -10,4 +10,16 @@ wheels/
 .venv
 .DS_Store
 
+# Environment variables
 .env
+
+# Testing and coverage
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+coverage.xml
+*.cover
+.hypothesis/
+.cache/

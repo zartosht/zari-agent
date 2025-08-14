@@ -126,14 +126,50 @@ The AI agent has access to these functions:
 
 ### Running Tests
 
+You can run tests in several ways:
+
+**Using the test script (recommended):**
 ```bash
-uv run tests.py
+uv run test.py
+```
+
+**Using pytest directly:**
+```bash
+uv run pytest tests.py
+```
+
+**Using Make (if you have make installed):**
+```bash
+make test          # Run all tests
+make test-verbose  # Run with verbose output
+make test-cov      # Run with coverage report
+```
+
+**Install test dependencies:**
+```bash
+uv add pytest pytest-cov --optional test
 ```
 
 ### Testing the Calculator Example
 
 ```bash
 uv run calculator/main.py "3 + 7 * 2"
+```
+
+### Quick Commands
+
+```bash
+# Run tests
+uv run test.py
+
+# Run with coverage
+uv run pytest tests.py --cov=functions
+
+# Clean cache files  
+make clean
+
+# Install all dependencies
+make install && make dev
 ```
 
 ## Contributing
