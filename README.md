@@ -16,6 +16,9 @@ A Python-based AI coding agent powered by Google's Gemini AI that can perform fi
 zari-agent/
 ├── main.py              # Main entry point for the AI agent
 ├── config.py            # Configuration and system prompts
+├── test.py              # Test runner script
+├── Makefile             # Build and test commands
+├── .env.example         # Environment variables template
 ├── functions/           # Available functions for the AI agent
 │   ├── functions.py     # Function registry and dispatcher
 │   ├── get_file_content.py
@@ -44,9 +47,9 @@ zari-agent/
    uv install
    ```
 
-   Or with pip:
+   Or with pip (after installing uv dependencies):
    ```bash
-   pip install -r requirements.txt
+   pip install google-genai python-dotenv
    ```
 
 3. **Set up environment variables**:
@@ -148,6 +151,11 @@ make test-cov      # Run with coverage report
 **Install test dependencies:**
 ```bash
 uv add pytest pytest-cov --optional test
+```
+
+Or if using pip:
+```bash
+pip install pytest pytest-cov
 ```
 
 ### Testing the Calculator Example
